@@ -1,0 +1,224 @@
+body {
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: serif;
+}
+
+#chatlog {
+    width: 300px;
+    position: fixed;
+    right: 10px;
+    padding: 10px;
+    bottom: 150px;
+    display: none;
+    box-shadow: 0px 0px 10px 5px rgb(117, 117, 117);
+    background-color: #fff;
+}
+
+.messages-box {
+    margin-top: 10px;
+    max-height: 300px;
+    transition: all 0.3s linear;
+    overflow: auto;
+}
+
+.message-intro {
+    transition: all 0.3s linear;
+    color: #fdd0ff;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.message {
+    padding: 5px 10px;
+    margin-bottom: 2px;
+    position: relative;
+    border-radius: 10px 0px 0px 10px;
+    width: 80%;
+    float: right;
+    transition: all 0.3s linear;
+    background-color: #cecbcb;
+}
+
+.message-answer {
+    padding: 5px 10px;
+    margin-bottom: 2px;
+    position: relative;
+    border-radius: 0px 10px 10px 0px;
+    width: 80%;
+    float: left;
+    transition: all 0.3s linear;
+    background-color: #fdd0ff;
+}
+
+.message.first-child {
+    border-radius: 10px 10px 0px 10px;
+}
+
+.message.last-child {
+    border-radius: 10px 0px 10px 10px;
+}
+
+.message.active {
+    background-color: #f37660;
+}
+
+.messages-box.p {
+    margin: 0 10px 0 0;
+}
+
+form {
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    margin: -10px;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+input {
+    padding: 7px 10px;
+    font-size: 16px;
+    width: 87%;
+    border: 1px solid #ddd;
+    color: #9a9797;
+    font-weight: 300;
+}
+
+input.focus {
+    outline: inherit;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    color: #fdd0ff;
+    cursor: pointer;
+}
+
+button.focus {
+    outline: inherit;
+}
+
+#message-icon {
+    width: 150px;
+    background-color: #9e23a5;
+    border-color: #fdd0ff;
+    border-style: dotted;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 900;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 10%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+#allcontent {
+    background-color: #fdd0ff;
+    border: solid #9e23a5;
+    border-radius: 6px;
+    border-width: 15px;
+    margin: 5% 0 0 5%;
+    width: 450px;
+}
+
+#titlebox {
+    background-color: #fdd0ff;
+    font-family: math;
+    text-align: center;
+}
+
+#candidatebox {
+    background-color: #fdd0ff;
+    display: flex;
+    flex-flow: row;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#swipeleft,
+#swiperight {
+    margin: 25% 3% 35% 3%;
+    font-weight: bold;
+    font-family: math;
+    background-color: #9e23a5;
+    padding: 5px;
+    border: solid #234729;
+    border-width: 15px;
+    border-radius: 6px;
+}
+
+#candidate {
+    background-color: #cfcfcf;
+    padding: 0px 15px 15px 15px;
+    border: solid #234729;
+    border-width: 15px;
+    border-radius: 6px;
+}
+
+#candidatename {
+    padding: 5px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#stats {
+    font-weight: bold;
+    padding: 15px;
+}
+
+#candidatestats {
+    display: flex;
+    flex-flow: row;
+    font-style: italic;
+}
+
+#statmean {
+    padding: 5px;
+}
+
+#stat30days {
+    padding: 5px;
+}
+
+#statytd {
+    padding: 5px;
+}
+
+#menu {
+    background-color: #fdd0ff;
+    display: flex;
+    flex-flow: row;
+    font-family: math;
+    margin: 0 0 0 30%;
+}
+
+#messageme {
+    background-color: #db7be0;
+    padding: 5px;
+    border: solid #234729;
+    border-radius: 6px;
+}
+
+#pics {
+    background-color: #db7be0;
+    padding: 5px;
+    border: solid #234729;
+    border-radius: 6px;
+}
+
+#superlike {
+    background-color: #db7be0;
+    padding: 5px;
+    border: solid #234729;
+    border-radius: 6px;
+}
+
+#footer {
+    font-family: Arial, Helvetica, sans-serif;
+}
