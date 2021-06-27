@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>STONKLY</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org//face/butler-stencil"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <div id="background">
+      <div id="footer">
+        <p>© STONKLY Inc., the business dating sim.</p>
+        <p>
+          All companies on this website are fictive. Not meant for actual
+          trading. This is an arts project. <a href="./about.html">About us</a>.
+        </p>
+      </div>
+
+      <div id="allcontent">
+        <div id="titlebox">
+<p>
+  
+              <img src="./img/logo.png" width="350px"></p>      
+          <p id="subtitle">meet your next favorite company!</p>
+        </div>
+        <div id="candidatebox">
+          <!-- <div id="swipeleft">
+                <p>NO...?</p>
+            </div> -->
+          <div id="candidate">
+            <div id="candidatename"></div>
+            <div id="candidatepic">
+                <img id="candidateimg">
+            </div>
+            <div id="candidatedesc">
+              <p>
+ 
+              </p>
+            </div>
+            <div id="statsdiv">
+            <div id="stats">Our stats:</div>
+
+            <div id="candidatestats">
+              <div id="statmean"></div>
+              <div id="stat30days"></div>
+              <div id="statytd"></div>
+              </div>
+            </div>
+          </div>
+          <!-- <div id="swiperight">
+                <p>YES!</p>
+            </div> -->
+        </div>
+        <div id="menu">
+          <button class="messageme" onclick="nextcandidate();">No...?</button>
+          <button class="pics" onclick="extralike();">EXTRALIKE</button>
+          <button class="superlike" onclick="rndcandidate();">YES!</button>
+        </div>
+
+        <!-- inspired by https://codepen.io/raimishal123/details/BzaQRL -->
+      </div>
+    </div>
+
+    <div role="region" arialabelleby="chat-title" id="chatlog">
+      <h1 id="chatbot-title" class="sr-only">
+        Chatbot window
+      </h1>
+      <div
+        tabindex="0"
+        class="messages-box"
+        id="messages-box"
+        aria-live="polite"
+      >
+        <div class="message-intro">Beginning of the conversation.</div>
+      </div>
+      <div class="create-message">
+        <form>
+          <input
+            id="chat-input"
+            type="text"
+            title="message to send"
+            aria-label="message to send"
+            placeholder="Type your message here!"
+          />
+          <button id="submit" title="send this message" aria-label="send">
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <button id="message-icon">
+      Chat with Max
+    </button>
+  </body>
+  <script src="somejsforthewin.js"></script>
+  <script src="tracery.min.js"></script>
+</html>

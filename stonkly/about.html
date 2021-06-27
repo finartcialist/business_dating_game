@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>STONKLY</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org//face/butler-stencil"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <div id="background">
+      <div id="footer">
+        <p>© STONKLY Inc., the business dating sim.</p>
+        <p>
+          All companies on this website are fictive. Not meant for actual
+          trading. This is an arts project. <a href="./about.html">About us</a>.
+        </p>
+      </div>
+
+      <div id="allcontent">
+        <div id="titlebox">
+          <h1><img src="./img/logo.png" width="350px"></h1>
+          <p id="subtitle">meet your next favorite company!</p>
+        </div>
+        <div id="about">
+        <p>STONKLY is THE place to meet your next favorite company.</p>
+        <p>It is an arts project featuring fictive companies, made by finartcialist. To know more about this art meets finance project, <a href="https://finartcialist.com">visit the finartcialist project website</a>.</p>
+        
+        <p><a href="./credits.html">List of credits for companies pictures</a>.</p>
+
+        </div>
+        <div id="menu">
+          <a id="back" class="pics" href="./index.html">Back to dating!</a>
+        </div>
+
+        <!-- inspired by https://codepen.io/raimishal123/details/BzaQRL -->
+      </div>
+    </div>
+
+    <div role="region" arialabelleby="chat-title" id="chatlog">
+      <h1 id="chatbot-title" class="sr-only">
+        Chatbot window
+      </h1>
+      <div
+        tabindex="0"
+        class="messages-box"
+        id="messages-box"
+        aria-live="polite"
+      >
+        <div class="message-intro">Beginning of the conversation.</div>
+      </div>
+      <div class="create-message">
+        <form>
+          <input
+            id="chat-input"
+            type="text"
+            title="message to send"
+            aria-label="message to send"
+            placeholder="Type your message here!"
+          />
+          <button id="submit" title="send this message" aria-label="send">
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <button id="message-icon">
+      Chat with Max
+    </button>
+  </body>
+  <script src="somejsforthewin.js"></script>
+</html>
