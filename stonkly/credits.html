@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>STONKLY</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org//face/butler-stencil"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <div id="background">
+      <div id="footer">
+        <p>© STONKLY Inc., the business dating sim.</p>
+        <p>
+          All companies on this website are fictive. Not meant for actual
+          trading. This is an arts project. <a href="./about.html">About us</a>.
+        </p>
+      </div>
+
+      <div id="allcontent">
+        <div id="titlebox">
+          <h1><img src="./img/logo.png" width="350px"></h1>
+          <p id="subtitle">meet your next favorite company!</p>
+        </div>
+        <div id="about">
+        <p>Thanks to generous Creative Commons licenses - here are the credits for the pictures used:</p>
+<p><a href="https://www.flickr.com/photos/79128958@N02/7648259300">William Inc.</a></p>
+<p><a href="https://www.flickr.com/photos/35034351119@N01/6274404">Stingless</a></p>
+        
+<p><a href="https://www.flickr.com/photos/45215772@N02/16975486175">Apples & Oranges</a></p>
+<p><a href="https://www.flickr.com/photos/43559902@N07/6196767837">Sublime</a></p>
+<p><a href="https://www.flickr.com/photos/24662369@N07/15224577939">Scaling VC</a></p>
+<p><a href="https://www.flickr.com/photos/9998127@N06/13304824925">Swivel</a></p>
+<p><a href-""></a></p>
+<p><a href="https://www.flickr.com/photos/104659112@N02/24558217376">Bready-made</a></p>
+<p><a href="https://www.flickr.com/photos/56858900@N03/5510506796">Glossary</a></p>
+<p><a href="https://www.flickr.com/photos/87690240@N03/18730839653">oUt ThErE</a></p>
+<p><a href="https://www.flickr.com/photos/65183610@N00/9550939064">(in|re)versE</a></p>
+<p><a href="https://www.flickr.com/photos/34666709@N00/28823358370">Automatina</a></p>
+<p><a href="https://www.flickr.com/photos/88869718@N00/4732147435">Protomatina</a></p>
+<p><a href="https://www.flickr.com/photos/8489692@N03/6182935606">Sweepadida</a></p>
+<p><a href="https://www.flickr.com/photos/forresto/6368393387/sizes/l/">MadeUP</a></p>
+<p><a href="https://www.flickr.com/photos/37553027@N02/4861024157">Smith Inc., Inc.</a></p>
+<p><a href="https://www.flickr.com/photos/141333312@N03/27946765428">Backstreet Memories</a></p>
+<p><a href="https://www.flickr.com/photos/40441865@N08/31775706300">A.L.W.</a></p>
+<p><a href="https://www.flickr.com/photos/40467171@N00/1688909894">TBME</a></p>
+
+        </div>
+        <div id="menu">
+          <a id="back" class="pics" href="./index.html">Back to dating!</a>
+        </div>
+
+        <!-- inspired by https://codepen.io/raimishal123/details/BzaQRL -->
+      </div>
+    </div>
+
+    <div role="region" arialabelleby="chat-title" id="chatlog">
+      <h1 id="chatbot-title" class="sr-only">
+        Chatbot window
+      </h1>
+      <div
+        tabindex="0"
+        class="messages-box"
+        id="messages-box"
+        aria-live="polite"
+      >
+        <div class="message-intro">Beginning of the conversation.</div>
+      </div>
+      <div class="create-message">
+        <form>
+          <input
+            id="chat-input"
+            type="text"
+            title="message to send"
+            aria-label="message to send"
+            placeholder="Type your message here!"
+          />
+          <button id="submit" title="send this message" aria-label="send">
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <button id="message-icon">
+      Chat with Max
+    </button>
+  </body>
+  <script src="somejsforthewin.js"></script>
+</html>

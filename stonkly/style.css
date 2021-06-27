@@ -1,0 +1,355 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "arial", sans-serif;
+  color: black;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='pattern' width='13' height='13' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(124)'%3E%3Crect id='pattern-background' width='400%25' height='400%25' fill='rgba(35, 78, 82,1)'%3E%3C/rect%3E%3Ccircle fill='rgba(40, 94, 97,1)' cx='20' cy='20' r='5'%3E%3C/circle%3E%3Ccircle fill='rgba(47, 133, 90,1)' cx='6' cy='40' r='2'%3E%3C/circle%3E%3Ccircle fill='rgba(47, 133, 90,1)' cx='46' cy='0' r='2'%3E%3C/circle%3E%3Ccircle fill='rgba(47, 133, 90,1)' cx='6' cy='0' r='2'%3E%3C/circle%3E%3Ccircle fill='rgba(47, 133, 90,1)' cx='46' cy='40' r='2'%3E%3C/circle%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23pattern)' height='100%25' width='100%25'%3E%3C/rect%3E%3C/svg%3E");
+}
+#chatlog {
+  width: 300px;
+  position: fixed;
+  right: 10px;
+  padding: 10px;
+  bottom: 150px;
+  display: none;
+  box-shadow: 0px 0px 2px 2px rgb(117, 117, 117);
+  background-color: #ffffff;
+  border-radius: 5%;
+}
+
+a{
+  color:#01421d;
+}
+
+button:focus,
+div:focus,
+input:focus {
+  outline: 0.2rem solid #b742ff;
+}
+
+.messages-box {
+  margin-top: 10px;
+  max-height: 300px;
+  transition: all 0.3s linear;
+  overflow: auto;
+}
+
+.message-intro {
+  transition: all 0.3s linear;
+  color: #01421d;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.message {
+  padding: 5px 10px;
+  margin-bottom: 2px;
+  position: relative;
+  border-radius: 10px 0px 0px 10px;
+  width: 80%;
+  float: right;
+  transition: all 0.3s linear;
+  background-color: #abffcf;
+}
+
+.message-answer {
+  padding: 5px 10px;
+  margin-bottom: 2px;
+  position: relative;
+  border-radius: 0px 10px 10px 0px;
+  width: 80%;
+  float: left;
+  transition: all 0.3s linear;
+  background-color: #fdd0ff;
+}
+
+.message.first-child {
+  border-radius: 10px 10px 0px 10px;
+}
+
+.message.last-child {
+  border-radius: 10px 0px 10px 10px;
+}
+
+.message.active {
+  background-color: #00ff6d;
+}
+
+.messages-box.p {
+  margin: 0 10px 0 0;
+}
+
+form {
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  margin: -10px;
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+input {
+  padding: 7px 10px;
+  font-size: 16px;
+  width: 87%;
+  border: 1px solid #ddd;
+  font-weight: 300;
+}
+
+input.focus {
+  outline: inherit;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  color: #00ff6d;
+  cursor: pointer;
+}
+
+button.focus {
+  outline: inherit;
+}
+
+#submit {
+  color: #01421d;
+}
+
+#message-icon {
+  width: 250px;
+  background-color: #00ff6d;
+  border-color: #00ff6d;
+  border-style: solid;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 900;
+  color: #000;
+  font-size: 20px;
+  border-radius: 10%;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+}
+
+#allcontent {
+  background-color: #ffffff;
+
+  border: solid #2f855a;
+  border-radius: 6px;
+  border-width: 4px;
+  margin: 5% 0 0 5%;
+  width: 350px;
+}
+
+h1 {
+  font-size: 64px;
+  color: #6b46c1;
+  font-family: "ButlerStencilRegular";
+}
+
+#subtitle {
+  font-style: italic;
+  padding: 0px;
+}
+
+#titlebox {
+  text-align: center;
+}
+
+#candidatebox {
+  display: flex;
+  flex-flow: row;
+}
+
+#candidate {
+display: flex;
+flex-flow: column;
+  padding: 0px 15px 15px 15px;
+  border: solid 2px #2f855a;
+}
+
+#candidatename {
+  padding: 5px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#stats {
+  font-weight: bold;
+  padding: 15px;
+}
+
+#candidatestats {
+  display: flex;
+  flex-flow: row;
+  font-style: italic;
+}
+
+#statmean {
+  padding: 5px;
+}
+
+#stat30days {
+  padding: 5px;
+}
+
+#statytd {
+  padding: 5px;
+}
+
+#menu {
+  display: flex;
+  flex-flow: row;
+    align-items: center;
+  justify-content: center;
+}
+
+.messageme {
+  background-color: #00ff6d;
+  padding: 5px;
+  border: solid 1px #00ff6d;
+  border-radius: 6px;
+  font-family: "arial", sans-serif;
+  color: #01421d;
+  margin: 5px;
+}
+
+.pics {
+  background-color: #00ff6d;
+  padding: 5px;
+  border: solid 2px #00ff6d;
+  border-radius: 6px;
+  font-family: "arial", sans-serif;
+  color: #01421d;
+}
+
+.superlike {
+  background-color: #00ff6d;
+  padding: 5px;
+  border: solid 1px #00ff6d;
+  border-radius: 6px;
+  font-family: "arial", sans-serif;
+  color: #01421d;
+  margin: 5px;
+}
+
+#footer {
+  font-family: monospace;
+  border: solid 1px #fffb00;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border-width: 4px;
+  margin: 5% 0 0 5%;
+  width: 350px;
+}
+
+/**
+ * ==============================================
+ * Dot Typing
+ * ==============================================
+ */
+
+.dot-typing {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  animation: dotTyping 1.5s infinite linear;
+}
+
+@keyframes dotTyping {
+  0% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+      10014px 0 0 0 #9880ff;
+  }
+  16.667% {
+    box-shadow: 9984px -10px 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+      10014px 0 0 0 #9880ff;
+  }
+  33.333% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+      10014px 0 0 0 #9880ff;
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px -10px 0 0 #9880ff,
+      10014px 0 0 0 #9880ff;
+  }
+  66.667% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+      10014px 0 0 0 #9880ff;
+  }
+  83.333% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+      10014px -10px 0 0 #9880ff;
+  }
+  100% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff,
+      10014px 0 0 0 #9880ff;
+  }
+}
+
+.stage {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  position: relative;
+  padding: 10px 0;
+  margin: 0 -5%;
+  overflow: hidden;
+
+  margin-bottom: 2px;
+  border-radius: 0px 10px 10px 0px;
+  width: 80%;
+  float: left;
+  transition: all 0.3s linear;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+#back{
+  text-decoration: none;
+  position: relative;
+}
+
+#candidatepic{
+position: relative;
+height: 280px;
+}
+
+#candidateimg{
+
+display: block;
+margin: auto;
+max-height:250px;
+position: absolute;
+   top: 50%;                         /* 3 */
+   transform: translate(0, -50%) ;   /* 4 */
+
+}
+
+#candidatedesc{
+height:80px;}
+
+#statsdiv{
+height:100px;}
+
+#about{
+padding: 5%;}
+
