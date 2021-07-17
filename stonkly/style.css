@@ -22,7 +22,7 @@ a{
   color:#01421d;
 }
 
-button:focus,
+button:focus,button:hover,
 div:focus,
 input:focus {
   outline: 0.2rem solid #b742ff;
@@ -207,7 +207,7 @@ flex-flow: column;
   justify-content: center;
 }
 
-.messageme {
+.no {
   background-color: #00ff6d;
   padding: 5px;
   border: solid 1px #00ff6d;
@@ -217,7 +217,7 @@ flex-flow: column;
   margin: 5px;
 }
 
-.pics {
+.extralike {
   background-color: #00ff6d;
   padding: 5px;
   border: solid 2px #00ff6d;
@@ -226,7 +226,7 @@ flex-flow: column;
   color: #01421d;
 }
 
-.superlike {
+.yes {
   background-color: #00ff6d;
   padding: 5px;
   border: solid 1px #00ff6d;
