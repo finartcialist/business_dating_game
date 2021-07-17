@@ -2,7 +2,7 @@
 
 meet your next favorite company!
 
-available at https://finartcialist.com/business-dating-game/stonkly
+available at https://finartcialist.com/business_dating_game/stonkly
 
 ![image of the STONKLY interfac](https://github.com/finartcialist/business_dating_game/blob/main/demo_v1.png)
 
