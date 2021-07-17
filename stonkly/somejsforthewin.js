@@ -32,7 +32,8 @@ var candidates = [
     mean: 5,
     days30: 10,
     ytd: 7,
-    img: "./images/william.jpg"
+    img: "./images/william.jpg",
+    alt: "an empty billboard",
   },
   {
     name: "Stingless Co.",
@@ -40,7 +41,8 @@ var candidates = [
     mean: 2,
     days30: 0.1,
     ytd: 5,
-    img: "./images/stingless.jpg"
+    img: "./images/stingless.jpg",
+    alt: "a group of bees"
   },
   {
     name: "Apples & Oranges",
@@ -49,7 +51,8 @@ var candidates = [
     mean: 25,
     days30: 25,
     ytd: 25,
-    img: "./images/apples.jpg"
+    img: "./images/apples.jpg",
+    alt: "slices of apples and oranges mixed together"
   },
   {
     name: "Sublime",
@@ -58,7 +61,8 @@ var candidates = [
     mean: 30,
     days30: 50,
     ytd: 20,
-    img: "./images/sublime.jpg"
+    img: "./images/sublime.jpg",
+    alt:"a bright sun hiding behind clouds, hovering over a factory."
   },
   {
     name: "Scaling VC",
@@ -67,7 +71,8 @@ var candidates = [
     mean: 12.24,
     days30: 15.11,
     ytd: 22,
-    img: "./images/scalinv_vc.jpg"
+    img: "./images/scalinv_vc.jpg",
+    alt:"a worker examining golden and silver plates"
   },
   {
     name: "Swivel",
@@ -75,7 +80,8 @@ var candidates = [
     mean: 2,
     days30: 8,
     ytd: 12,
-    img: "./images/swivel.jpg"
+    img: "./images/swivel.jpg",
+    alt:"a rusty boat swivel"
   },
   {
     name: "Bready-made",
@@ -84,7 +90,8 @@ var candidates = [
     mean: 6,
     days30: 10,
     ytd: 12,
-    img: "./images/breadymade.jpg"
+    img: "./images/breadymade.jpg",
+    alt:"an art exhibit featuring round breads"
   },
   {
     name: "The Glossary",
@@ -93,7 +100,8 @@ var candidates = [
     mean: 18,
     days30: 2,
     ytd: 3,
-    img: "./images/glossary.jpg"
+    img: "./images/glossary.jpg",
+    alt:"the word dictionary pictured in a dictionary"
   },
   {
     name: "oUt ThErE",
@@ -102,7 +110,8 @@ var candidates = [
     mean: NaN,
     days30: NaN,
     ytd: NaN,
-    img: "./images/out_there.jpg"
+    img: "./images/out_there.jpg",
+    alt:"a time lapse picture of a ferrywheel, in an amusement park"
   },
   {
     name: "(in|re)versE",
@@ -111,7 +120,8 @@ var candidates = [
     mean: 0.1,
     days30: 0.23,
     ytd: 1.75,
-    img: "./images/inreverse.jpg"
+    img: "./images/inreverse.jpg",
+    alt:"a close-up of a rewind knob"
   },
   {
     name: "Automatina",
@@ -120,7 +130,8 @@ var candidates = [
     mean: 4,
     days30: 6,
     ytd: 8,
-    img: "./images/automatina.jpg"
+    img: "./images/automatina.jpg",
+    alt:"sunny-side up breakfast eggs shaped like a robot face"
   },
   {
     name: "Protomatina",
@@ -129,7 +140,8 @@ var candidates = [
     mean: 10,
     days30: 30,
     ytd: 3,
-    img: "./images/protomatina.jpg"
+    img: "./images/protomatina.jpg",
+    alt:"a geometrically aligned breakfast"
   },
   {
     name: "Sweepadida",
@@ -138,7 +150,8 @@ var candidates = [
     mean: 0,
     days30: 12,
     ytd: 3,
-    img: "./images/sweepadida.jpg"
+    img: "./images/sweepadida.jpg",
+    alt:"a close-up picture of a plastic broom"
   },
   {
     name: "MadeUP",
@@ -147,7 +160,8 @@ var candidates = [
     mean: -3,
     days30: -8,
     ytd: 10,
-    img: "./images/madeup.jpg"
+    img: "./images/madeup.jpg",
+    alt:"a panoramic, dreamy picture of a greenhouse, with plants"
   },
   {
     name: "Smith Inc., Inc.",
@@ -156,7 +170,8 @@ var candidates = [
     mean: -12,
     days30: 60,
     ytd: 3,
-    img: "./images/smithincinc.jpg"
+    img: "./images/smithincinc.jpg",
+    alt:"a menacing skyscraper under a cloudy sky"
   },
   {
     name: "Backstreet Memories",
@@ -165,7 +180,8 @@ var candidates = [
     mean:65,
     days30:22,
     ytd: 78,
-    img: "./images/backstreet.jpg"
+    img: "./images/backstreet.jpg",
+    alt:"a cabin in the forest"
   },
   {
     name: "A.L.W.",
@@ -174,7 +190,8 @@ var candidates = [
     mean: 2,
     days30: 6,
     ytd: 10,
-    img: "./images/alw.jpg"
+    img: "./images/alw.jpg",
+    alt:"a broken public phone"
   },
   {
     name: "The Best Match Ever",
@@ -183,7 +200,8 @@ var candidates = [
     mean: 23,
     days30: 4,
     ytd: 2,
-    img: "./images/bestmatch.jpg"
+    img: "./images/bestmatch.jpg",
+    alt:"matches falling down"
   }
 ];
 
@@ -212,6 +230,7 @@ function updateCandidate(temp_candidate) {
     "Last 30 days: " + temp_candidate.days30 + "%";
   document.getElementById("statytd").innerHTML =
     "YTD: " + temp_candidate.ytd + "%";
+ document.getElementById("candidateimg").alt = temp_candidate.alt;
   candidate_nb++;
   if (candidate_nb >= candidates.length) {
     candidate_nb = 0;
@@ -240,6 +259,7 @@ function extralike() {
     already_open = true;
   }
   scrolling();
+  nextcandidate();
 }
 
 $(document).ready(function() {
@@ -272,7 +292,12 @@ $(document).ready(function() {
           "</p></div>"
       );
 
-      if (message.includes("hello")) {
+      if (message.includes("hello") || message.includes("hi")) {
+              $messagesBox.append(
+          genMessageAnswer(
+            "I am Max, your personal matchmaker. Let me present you to a company..."
+          )
+        );
         setTimeout(function answer() {
           $messagesBox.append(genMessageAnswer("well, well, hello!"));
         }, 1000);

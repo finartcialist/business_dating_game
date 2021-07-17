@@ -22,17 +22,16 @@
         <p>© STONKLY Inc., the business dating sim.</p>
         <p>
           All companies on this website are fictive. Not meant for actual
-          trading. This is an arts project. <a href="./about.html">About us</a>.
+          trading. This is an arts project. <a href="./about.html">About this project</a>.
         </p>
       </div>
 
       <div id="allcontent">
         <div id="titlebox">
-<p>
-  
-              <img src="./img/logo.png" width="350px"></p>      
+<p><a href="./index.html"><img src="./img/logo.png" width="350px" alt="the STONKLY logo"></a></p>      
           <p id="subtitle">meet your next favorite company!</p>
         </div>
+
         <div id="candidatebox">
           <!-- <div id="swipeleft">
                 <p>NO...?</p>
@@ -61,10 +60,10 @@
                 <p>YES!</p>
             </div> -->
         </div>
-        <div id="menu">
-          <button class="messageme" onclick="nextcandidate();">No...?</button>
-          <button class="pics" onclick="extralike();">EXTRALIKE</button>
-          <button class="superlike" onclick="rndcandidate();">YES!</button>
+        <div id="menu" role="navigation">
+          <button class="no" alt="No, show me another one" onclick="nextcandidate();">No...?</button>
+          <button class="extralike" onclick="extralike();" alt="EXTRALIKE this company">EXTRALIKE</button>
+          <button class="yes" onclick="rndcandidate();" alt="Yes, I like this company">YES!</button>
         </div>
 
         <!-- inspired by https://codepen.io/raimishal123/details/BzaQRL -->
@@ -99,10 +98,9 @@
       </div>
     </div>
 
-    <button id="message-icon">
+    <button id="message-icon" alt="Chat with the matchmaking assistant, Max">
       Chat with Max
     </button>
   </body>
   <script src="somejsforthewin.js"></script>
-  <script src="tracery.min.js"></script>
 </html>
