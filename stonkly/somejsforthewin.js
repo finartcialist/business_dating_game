@@ -26,6 +26,16 @@ var lovemsgs = [
 
 var candidates = [
   {
+    name: "Automatina",
+    desc:
+      "We automate the morning routine. Extra fees for eating your breakfast so you don't have to.",
+    mean: 4,
+    days30: 6,
+    ytd: 8,
+    img: "./images/automatina.jpg",
+    alt:"sunny-side up breakfast eggs shaped like a robot face"
+  },
+  {
     name: "William Inc.",
     desc:
       "As one of the most well-known marketing business in the country, we are advertising to YOU, our dear investor: invest in us and reap the rewards!",
@@ -123,16 +133,7 @@ var candidates = [
     img: "./images/inreverse.jpg",
     alt:"a close-up of a rewind knob"
   },
-  {
-    name: "Automatina",
-    desc:
-      "We automate the morning routine. Extra fees for eating your breakfast so you don't have to.",
-    mean: 4,
-    days30: 6,
-    ytd: 8,
-    img: "./images/automatina.jpg",
-    alt:"sunny-side up breakfast eggs shaped like a robot face"
-  },
+
   {
     name: "Protomatina",
     desc:
